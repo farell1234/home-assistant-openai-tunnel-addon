@@ -1,0 +1,15 @@
+configuration:
+  control_plane_tunnel_id:
+    name: Identyfikator tunelu OpenAI
+    description: Identyfikator tunelu utworzonego w OpenAI Platform.
+  control_plane_api_key:
+    name: Klucz runtime API
+    description: Dedykowany klucz OpenAI używany wyłącznie przez klienta tunelu.
+  mcp_server_url:
+    name: Adres serwera MCP
+    description: Prywatny adres lokalnego serwera MCP Home Assistanta.
+  log_level:
+    name: Poziom logowania
+    description: Pozostaw info; debug używaj tylko tymczasowo do diagnostyki.
+network:
+  8080/tcp: Endpoint kontroli zdrowia klienta tunelu
