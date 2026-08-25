@@ -1,5 +1,14 @@
 # Changelog
 
+## 0.0.12-3
+
+- Dodano lokalny reverse proxy, który uwierzytelnia wywołania MCP systemowym
+  tokenem Home Assistanta.
+- Usunięto potrzebę publicznego OAuth Home Assistanta oraz ręcznego tokenu
+  długoterminowego.
+- Proxy nasłuchuje wyłącznie na interfejsie loopback kontenera i nie ujawnia
+  tokenu usłudze tunelowej.
+
 ## 0.0.12-2
 
 - Poprawiono wewnętrzny adres Home Assistant Core: dodatki używają portu 80,
