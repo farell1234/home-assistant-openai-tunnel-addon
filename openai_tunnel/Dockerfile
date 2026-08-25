@@ -6,10 +6,9 @@ FROM ghcr.io/openai/tunnel-client:v0.0.12
 ARG BUILD_VERSION
 ARG BUILD_ARCH
 
-RUN apk add --no-cache jq ca-certificates nginx gettext
+RUN apk add --no-cache jq ca-certificates
 
 COPY run.sh /run.sh
-COPY nginx.conf.template /etc/nginx/nginx.conf.template
 RUN chmod 0755 /run.sh
 
 LABEL \
