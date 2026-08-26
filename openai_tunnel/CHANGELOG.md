@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.0.12-4
+
+- Poprawiono migrację z wersji `0.0.12-2`: nowe pole tokenu Home Assistanta jest
+  opcjonalne podczas instalacji aktualizacji.
+- Dodatek nadal odmówi uruchomienia do czasu zapisania prawidłowego tokenu, ale
+  sama aktualizacja nie jest już blokowana przez brak nowej opcji.
+
 ## 0.0.12-3
 
 - Dodano lokalną, niedostępną z sieci bramkę uwierzytelniającą dla endpointu MCP.
