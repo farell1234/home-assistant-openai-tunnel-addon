@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.0.12-3
+
+- Dodano lokalną, niedostępną z sieci bramkę uwierzytelniającą dla endpointu MCP.
+- Token dedykowanego użytkownika Home Assistanta jest maskowany i nie trafia do
+  logów ani repozytorium.
+- Tunel może być dodany w ChatGPT z opcją „Brak uwierzytelnienia”, bez publicznego
+  wystawiania serwera OAuth Home Assistanta.
+
 ## 0.0.12-2
 
 - Poprawiono wewnętrzny adres Home Assistant Core: dodatki używają portu 80,

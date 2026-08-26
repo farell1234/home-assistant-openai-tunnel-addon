@@ -22,16 +22,17 @@ Dodatek:
 
    - identyfikator tunelu z OpenAI Platform,
    - klucz runtime API zapisany w menedżerze haseł,
-   - pozostaw domyślny adres MCP, jeśli Home Assistant działa na tym samym urządzeniu.
+   - token długoterminowy dedykowanego, nieadministracyjnego użytkownika Home
+     Assistanta.
 5. Włącz **Uruchamiaj przy starcie**, **Watchdog** i uruchom dodatek.
 
 Klucza API nigdy nie dodawaj do GitHuba, pliku README ani zgłoszeń błędów.
 
-## Domyślny serwer MCP
+## Lokalna bramka uwierzytelniająca
 
-`http://homeassistant:8123/api/mcp/assist`
-
-Jest to lokalny endpoint integracji **Model Context Protocol Server** Home Assistanta.
+Dodatek przekazuje wyłącznie żądania do endpointu `/api/mcp/assist` i lokalnie
+dodaje token Home Assistanta. Bramka nasłuchuje tylko wewnątrz kontenera, dlatego
+nie otwiera dodatkowego portu w sieci LAN ani w routerze.
 
 ## Diagnostyka
 
@@ -39,7 +40,9 @@ Stan klienta sprawdzisz w zakładce **Dziennik** dodatku. Port `18080` na hości
 
 ## Bezpieczeństwo
 
-- Klucz jest polem typu `password` w opcjach dodatku.
+- Oba klucze są polami typu `password` w opcjach dodatku.
+- Token Home Assistanta należy do osobnego użytkownika bez uprawnień administratora.
+- Lokalna bramka przekazuje tylko metody MCP na ścieżce `/api/mcp/assist`.
 - Surowe logowanie HTTP jest wyłączone.
 - Interfejs administracyjny klienta nie jest dostępny z sieci LAN.
 - Nie są otwierane ani przekierowywane porty routera do Internetu.

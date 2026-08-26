@@ -5,9 +5,9 @@ configuration:
   control_plane_api_key:
     name: Runtime API key
     description: Dedicated OpenAI runtime API key used only by tunnel-client.
-  mcp_server_url:
-    name: MCP server URL
-    description: Private URL of the local Home Assistant MCP server.
+  home_assistant_access_token:
+    name: Home Assistant access token
+    description: Token for the dedicated ChatGPT user; the value is masked and never logged.
   log_level:
     name: Log level
     description: Keep info unless temporary diagnostics are required.

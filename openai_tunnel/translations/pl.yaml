@@ -5,9 +5,9 @@ configuration:
   control_plane_api_key:
     name: Klucz runtime API
     description: Dedykowany klucz OpenAI używany wyłącznie przez klienta tunelu.
-  mcp_server_url:
-    name: Adres serwera MCP
-    description: Prywatny adres lokalnego serwera MCP Home Assistanta.
+  home_assistant_access_token:
+    name: Token dostępu Home Assistanta
+    description: Token dedykowanego użytkownika ChatGPT; pole jest maskowane i nie trafia do logów.
   log_level:
     name: Poziom logowania
     description: Pozostaw info; debug używaj tylko tymczasowo do diagnostyki.

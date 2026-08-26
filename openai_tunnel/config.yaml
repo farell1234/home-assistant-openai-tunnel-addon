@@ -1,5 +1,5 @@
 name: OpenAI Secure MCP Tunnel
-version: "0.0.12-2"
+version: "0.0.12-3"
 slug: openai_secure_mcp_tunnel
 description: >-
   Prywatny, wychodzący tunel HTTPS pomiędzy OpenAI i lokalnym serwerem MCP
@@ -19,10 +19,10 @@ watchdog: http://[HOST]:[PORT:8080]/healthz
 options:
   control_plane_tunnel_id: "tunnel_00000000000000000000000000000000"
   control_plane_api_key: null
-  mcp_server_url: http://homeassistant/api/mcp/assist
+  home_assistant_access_token: null
   log_level: info
 schema:
   control_plane_tunnel_id: "match(^tunnel_[0-9a-f]{32}$)"
   control_plane_api_key: password
-  mcp_server_url: url
+  home_assistant_access_token: password
   log_level: "list(debug|info|warn)"
